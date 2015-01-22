@@ -89,7 +89,7 @@
 						<executions>
 							<execution>
 								<id>github-upload</id>
-								<phase>deploy</phase>
+								<phase>install</phase>
 								<goals>
 									<goal>release</goal>
 								</goals>
