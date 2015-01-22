@@ -3,7 +3,7 @@
 
 	<groupId>name.valery1707.java</groupId>
 	<artifactId>test-maven-release-github</artifactId>
-	<version>1.6</version>
+	<version>1.7-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>test-maven-release-github</name>
