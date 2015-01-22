@@ -25,7 +25,7 @@
 	<scm>
 		<url>https://github.com/valery1707/test-maven-release-github</url>
 		<connection>scm:git:https://github.com/valery1707/test-maven-release-github.git</connection>
-		<developerConnection>scm:git|git@github.com:valery1707/test-maven-release-github.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:valery1707/test-maven-release-github.git</developerConnection>
 		<tag>v1.7</tag>
 	</scm>
 
