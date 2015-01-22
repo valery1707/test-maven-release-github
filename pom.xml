@@ -3,7 +3,7 @@
 
 	<groupId>name.valery1707.java</groupId>
 	<artifactId>test-maven-release-github</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<packaging>jar</packaging>
 
 	<name>test-maven-release-github</name>
@@ -26,7 +26,7 @@
 		<url>https://github.com/valery1707/test-maven-release-github</url>
 		<connection>scm:git|https://github.com/valery1707/test-maven-release-github.git</connection>
 		<developerConnection>scm:git|git@github.com:valery1707/test-maven-release-github.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v1.2</tag>
 	</scm>
 
 	<inceptionYear>2015</inceptionYear>
