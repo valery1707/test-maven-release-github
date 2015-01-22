@@ -62,6 +62,19 @@
 				</configuration>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<useReleaseProfile>false</useReleaseProfile>
+					<releaseProfiles>release</releaseProfiles>
+					<goals>install</goals>
+					<localCheckout>true</localCheckout>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -70,45 +83,6 @@
 			<id>release</id>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-release-plugin</artifactId>
-						<version>2.5.1</version>
-						<configuration>
-							<autoVersionSubmodules>true</autoVersionSubmodules>
-							<tagNameFormat>v@{project.version}</tagNameFormat>
-							<useReleaseProfile>false</useReleaseProfile>
-							<releaseProfiles>release</releaseProfiles>
-							<preparationGoals>clean</preparationGoals>
-							<goals>install</goals>
-						</configuration>
-						<executions>
-							<execution>
-								<id>release-prepare</id>
-								<phase>package</phase>
-								<goals>
-									<goal>prepare</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>release-perform</id>
-								<phase>package</phase>
-								<goals>
-									<goal>perform</goal>
-								</goals>
-								<configuration>
-									<localCheckout>true</localCheckout>
-								</configuration>
-							</execution>
-							<execution>
-								<id>release-clean</id>
-								<phase>package</phase>
-								<goals>
-									<goal>clean</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
 
 					<plugin>
 						<groupId>de.jutzig</groupId>
