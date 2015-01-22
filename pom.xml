@@ -79,9 +79,34 @@
 							<tagNameFormat>v@{project.version}</tagNameFormat>
 							<useReleaseProfile>false</useReleaseProfile>
 							<releaseProfiles>release</releaseProfiles>
-							<preparationGoals>install</preparationGoals>
 							<goals>install</goals>
 						</configuration>
+						<executions>
+							<execution>
+								<id>release-prepare</id>
+								<phase>package</phase>
+								<goals>
+									<goal>prepare</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>release-perform</id>
+								<phase>package</phase>
+								<goals>
+									<goal>perform</goal>
+								</goals>
+								<configuration>
+									<localCheckout>true</localCheckout>
+								</configuration>
+							</execution>
+							<execution>
+								<id>release-clean</id>
+								<phase>package</phase>
+								<goals>
+									<goal>clean</goal>
+								</goals>
+							</execution>
+						</executions>
 					</plugin>
 
 					<plugin>
