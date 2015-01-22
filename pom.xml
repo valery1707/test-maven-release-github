@@ -71,7 +71,8 @@
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 					<useReleaseProfile>false</useReleaseProfile>
 					<releaseProfiles>release</releaseProfiles>
-					<goals>deploy</goals>
+					<preparationGoals>github-release-plugin:release</preparationGoals>
+					<goals>package</goals>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -89,7 +90,6 @@
 						<executions>
 							<execution>
 								<id>github-upload</id>
-								<phase>install</phase>
 								<goals>
 									<goal>release</goal>
 								</goals>
