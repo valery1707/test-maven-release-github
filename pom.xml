@@ -110,7 +110,6 @@
 										<excludes>
 											<exclude>**/log.log</exclude>
 										</excludes>
-										<followSymlinks>false</followSymlinks>
 									</fileset>
 									<filesets>
 										<fileset>
@@ -121,7 +120,6 @@
 											<excludes>
 												<exclude>%regex[^.*\.properties$]</exclude>
 											</excludes>
-											<followSymlinks>false</followSymlinks>
 										</fileset>
 									</filesets>
 								</configuration>
