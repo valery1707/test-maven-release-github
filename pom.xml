@@ -101,8 +101,8 @@
 									<releaseName>v${project.version}</releaseName>
 									<tag>v${project.version}</tag>
 									<overwriteArtifact>true</overwriteArtifact>
-									<artifact />
-									<fileset>
+									<artifact> </artifact>
+									<fileSet>
 										<directory>.</directory>
 										<includes>
 											<include>**/pom.*</include>
@@ -110,18 +110,18 @@
 										<excludes>
 											<exclude>**/log.log</exclude>
 										</excludes>
-									</fileset>
-									<filesets>
-										<fileset>
+									</fileSet>
+									<fileSets>
+										<fileSet>
 											<directory>.</directory>
 											<includes>
 												<include>**/pom.*</include>
 											</includes>
 											<excludes>
-												<exclude>%regex[^.*\.properties$]</exclude>
+												<exclude>%regex[.properties$]</exclude>
 											</excludes>
-										</fileset>
-									</filesets>
+										</fileSet>
+									</fileSets>
 								</configuration>
 							</execution>
 						</executions>
